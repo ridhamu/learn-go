@@ -7,7 +7,7 @@ func main() {
 
 	//slice 1 := mengambil data ke 3 sampai 6
 	slice1 := array[3:6]
-	fmt.Printf("slice1 := array[4:6] adalah %v\n", slice1)
+	fmt.Printf("slice1 := array[3:6] adalah %v\n", slice1)
 
 
 	//slice 2 := mengambil data pertama sampai ketiga
@@ -19,7 +19,7 @@ func main() {
 	fmt.Printf("slice3 := array[4:6] adalah %v\n", slice3)
 
 
-	//slice 4 := taking the whole array into play
+	//slice 4 := taking the whole array
 	slice4 := array[:]
 	fmt.Printf("slice4 := array[:] adalah %v\n", slice4)
 
@@ -34,13 +34,13 @@ func main() {
 	daySlice1[1] = "Minggu Baru"
 	fmt.Printf("daySlice1 := %v\n", daySlice1)
 
-	// membuat daySlice2 menggunakan append, disini akan mencoba append dengan 1 data baru
+	// membuat slice daySlice2 menggunakan append, disini melakukan append dengan 1 data baru dari daySlice1
 	// diluar capasitas dari daySlice1 
 	daySlice2 := append(daySlice1, "Hari Libur Baru euyyy") 
 	daySlice2[0] = "ups"
 	daySlice2[1] = "Minggu Lama"
-	fmt.Printf("daySlice2 := %v\n", daySlice2)
-	fmt.Printf("daySlice1 := %v\n", daySlice1)
+	fmt.Printf("daySlice2 := %v\n", daySlice2) // ["ups", "Minggu Lama", "Hari Libur Baru euyyy"]
+	fmt.Printf("daySlice1 := %v\n", daySlice1) // ["Sabtu Baru", "Minggu Baru"]
 	fmt.Printf("days := %v\n", days)
 
 
@@ -48,7 +48,7 @@ func main() {
 	newSlice := make([]string, 2, 5)
 	newSlice[0] = "Muhammad"
 	newSlice[1] = "Ridha"
-// newSlice[2] = "Keren" // error index [2] out of range because length is 2
+  //newSlice[2] = "Keren" // error index [2] out of range because length is 2
 	fmt.Printf("newSlice := %v\n", newSlice)
 
 
